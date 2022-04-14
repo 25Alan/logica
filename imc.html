@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc_calc</title>
+</head>
+<body>
+
+    <h1>CALCULO IMC</h1>
+
+    <script>
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+        
+        function saltarLinea(){
+            document.write("<br><br><br>");
+        }
+        
+        function calcularImc(peso,alt){
+
+            return peso/(alt * alt);
+
+        }
+
+        var name = prompt("INGRESAR NOMBRE");
+        var peso = prompt(name + " INGRESAR SU PESO");
+        var altura = prompt(name + " INGRESAR SU ALTURA");
+
+        imprimir(name + " el IMC calculado es = " + calcularImc(peso,altura));
+        
+    </script>
+</body>
+</html>
