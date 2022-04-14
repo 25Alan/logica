@@ -7,6 +7,28 @@
     <title>FUTBOL</title>
 </head>
 <body>
-    
+    <h1> PROGRAMA PARA CALCULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+
+    <script>
+
+        function saltarLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase){
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var vic = parseInt(prompt("INGRESAR LA CANTIDAD DE VICTORIAS"));
+        var emp = parseInt(prompt("INGRESAR LA CANTIDAD DE EMPATES"));
+
+        var total = vic * 3 + emp;
+
+        imprimir("EL TOTAL DE PUNTOS OBTENIDOS ES = " + total);
+
+    </script>
 </body>
 </html>
