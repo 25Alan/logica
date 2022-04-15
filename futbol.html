@@ -14,7 +14,6 @@
         function saltarLinea(){
             document.write("<br>");
             document.write("<br>");
-            document.write("<br>");
         }
 
         function imprimir(frase){
@@ -28,6 +27,12 @@
         var total = vic * 3 + emp;
 
         imprimir("EL TOTAL DE PUNTOS OBTENIDOS ES = " + total);
+
+        document.write("<h2>PUNTAJE DEL AÑO PASADO = 28</h2>")
+
+        if(total > 28) document.write("EL EQUIPO ESTÁ MEJOR QUE EL AÑO PASADO");
+        else if (total < 28) document.write("EL EQUIPO ESTÁ PEOR QUE EL AÑO PASADO");
+        else document.write("EL EQUIPO ESTÁ IGUAL QUE EL AÑO PASADO");
 
     </script>
 </body>
