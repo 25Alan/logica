@@ -32,6 +32,17 @@
         var altura = prompt(name + " INGRESAR SU ALTURA");
 
         imprimir(name + " el IMC calculado es = " + calcularImc(peso,altura));
+
+        //PONGO POCAS CONDICIONES PARA NO LLENAR MUCHO.
+
+        if (calcularImc(peso,altura) < 18.5) 
+            document.write(name + " ,se lo considera con Insuficiencia ponderal");
+        else if (calcularImc(peso,altura) >= 18.5 && calcularImc(peso,altura) <= 24.9) 
+            document.write(name + " ,se lo considera Intervalo normal");
+        else if (calcularImc(peso,altura) >= 25.0 && calcularImc(peso,altura) <= 30.0) 
+            document.write(name + " ,se lo considera sobrepeso");
+        else 
+            document.write(name + " ,se lo considera obesidad");
         
     </script>
 </body>
