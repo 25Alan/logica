@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADIVINA-ADIVINA</title>
 </head>
+
 <body>
-    
+    <h1>ADIVINÁ EL NÚMERO</h1>
+    <hr>
+    <script>
+        const numeroPensado = Math.round(Math.random()*10);
+        let numeroIngresado = parseInt(prompt("INGRESAR NÚMERO (0-10)"));
+
+        if (numeroPensado === numeroIngresado) document.write("ACERTÓ, ADIVINÓ BIEN");
+        else document.write("ERRÓ, ADIVINÓ MAL, EL NÚMERO A ADIVINAR ERA = " + numeroPensado);
+    </script>    
 </body>
+
 </html>
