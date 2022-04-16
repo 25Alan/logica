@@ -11,11 +11,28 @@
     <h1>ADIVINÁ EL NÚMERO</h1>
     <hr>
     <script>
-        const numeroPensado = Math.round(Math.random()*10);
-        let numeroIngresado = parseInt(prompt("INGRESAR NÚMERO (0-10)"));
 
-        if (numeroPensado === numeroIngresado) document.write("ACERTÓ, ADIVINÓ BIEN");
-        else document.write("ERRÓ, ADIVINÓ MAL, EL NÚMERO A ADIVINAR ERA = " + numeroPensado);
+        function generador_numAlzar( numero ) {
+
+            return Math.round(Math.random() * numero);
+
+        }
+
+        const numeroPensado = generador_numAlzar(15);
+        let numeroIngresado = parseInt(prompt("INGRESAR NÚMERO (0-10)"));
+        let fallo = false;
+
+        if (numeroPensado === numeroIngresado)
+            document.write("ACERTÓ, ADIVINÓ BIEN");
+        else 
+            fallo = true; 
+            document.write("ERRÓ, ADIVINÓ MAL, EL NÚMERO A ADIVINAR ERA = " + numeroPensado);
+
+        if(fallo = true && numeroIngresado > numeroPensado) document.write("EL NÚMERO A ADIVINAR ES MAYOR");
+        else if (fallo = true && numeroIngresado === numeroPensado) document.write("EL NÚMERO A ADIVINAR ES MENOR")
+
+        //Se puede agregar que tenga 3 intentos acá
+
     </script>    
 </body>
 
