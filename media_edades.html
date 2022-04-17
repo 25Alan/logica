@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA DE EDADES</title>
+</head>
+<body>
+    <h1>CALCULO DE LA MEDIA DE EDADES</h1>
+
+    <script>
+        const TOTALMIEMBROS = parseInt(prompt("INGRESA EL TOTAL DE MIEMBROS"));
+        let sumatoria = 0;
+        let cont = 1;
+
+        for(cont;cont <= TOTALMIEMBROS;cont ++){
+            var edad = parseInt(prompt("INGRESAR LA EDAD DEL FAMILIAR " + cont));
+            sumatoria += edad;             
+        }
+
+        document.write("LA MEDIA DE LA FAMILIA ES = " + (sumatoria/TOTALMIEMBROS));
+        
+    </script>
+</body>
+</html>
