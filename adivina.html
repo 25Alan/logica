@@ -20,7 +20,7 @@
 
         const NUMEROPENSADO = generador_numAlzar(10);
         let numeroIngresado = 0;
-        let intentoHechos = 1;
+        let intentoHechos = 0;
         
         while (numeroIngresado != NUMEROPENSADO){
             
@@ -29,15 +29,17 @@
             if(numeroIngresado > NUMEROPENSADO) alert("EL NÚMERO A ADIVINAR ES MAYOR");
             else if (numeroIngresado < NUMEROPENSADO) alert("EL NÚMERO A ADIVINAR ES MENOR");
 
-            if (numeroIngresado === NUMEROPENSADO) 
+            if (numeroIngresado === NUMEROPENSADO){ 
                 document.write("CORRECTO, ADIVINASTE"); 
                 break;
-            
+            }
+
             intentoHechos ++;
 
-            if (intentoHechos === 3 && numeroIngresado != NUMEROPENSADO)
+            if (intentoHechos === 3 && numeroIngresado != NUMEROPENSADO){
                 document.write("NO LO LOGRASTE");
                 break;
+            }
         }
     </script>    
 </body>
