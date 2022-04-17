@@ -18,21 +18,27 @@
 
         }
 
-        const numeroPensado = generador_numAlzar(15);
-        let numeroIngresado = parseInt(prompt("INGRESAR NÚMERO (0-10)"));
-        let fallo = false;
+        const NUMEROPENSADO = generador_numAlzar(10);
+        let numeroIngresado = 0;
+        let intentoHechos = 1;
+        
+        while (numeroIngresado != NUMEROPENSADO){
+            
+            numeroIngresado = parseInt(prompt("INGRESAR NÚMERO (0-10)"));
+    
+            if(numeroIngresado > NUMEROPENSADO) alert("EL NÚMERO A ADIVINAR ES MAYOR");
+            else if (numeroIngresado < NUMEROPENSADO) alert("EL NÚMERO A ADIVINAR ES MENOR");
 
-        if (numeroPensado === numeroIngresado)
-            document.write("ACERTÓ, ADIVINÓ BIEN");
-        else 
-            fallo = true; 
-            document.write("ERRÓ, ADIVINÓ MAL, EL NÚMERO A ADIVINAR ERA = " + numeroPensado);
+            if (numeroIngresado === NUMEROPENSADO) 
+                document.write("CORRECTO, ADIVINASTE"); 
+                break;
+            
+            intentoHechos ++;
 
-        if(fallo = true && numeroIngresado > numeroPensado) document.write("EL NÚMERO A ADIVINAR ES MAYOR");
-        else if (fallo = true && numeroIngresado === numeroPensado) document.write("EL NÚMERO A ADIVINAR ES MENOR")
-
-        //Se puede agregar que tenga 3 intentos acá
-
+            if (intentoHechos === 3 && numeroIngresado != NUMEROPENSADO)
+                document.write("NO LO LOGRASTE");
+                break;
+        }
     </script>    
 </body>
 
