@@ -7,7 +7,19 @@
     <title>CANVAS-BANDERA</title>
 </head>
 <body>
-    <canvas width="500" height="500"></canvas>
-    <script></script>
+    <canvas width="600" height="500"></canvas>
+    <script>
+        const SCREEN = document.querySelector('canvas');
+        const PINCEL = SCREEN.getContext("2d");
+
+        PINCEL.fillStyle = "cyan";
+        PINCEL.fillRect(0,0,200,500);
+
+        PINCEL.fillStyle = "white";
+        PINCEL.fillRect(200,0,200,500);
+
+        PINCEL.fillStyle = "cyan";
+        PINCEL.fillRect(400,0,200,500);
+    </script>
 </body>
 </html>
