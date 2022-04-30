@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESCUADRA</title>
+    <link rel="stylesheet" href="css/canvas_style.css">
 </head>
 <body>
-    <canvas width="400" height="400"></canvas>
+    <canvas width="600" height="400"></canvas>
 
     <script>
         const SCREEN = document.querySelector('canvas');
         const PINCEL = SCREEN.getContext("2d");
+
+        PINCEL.fillStyle = "white";
+        PINCEL.beginPath();
+        PINCEL.moveTo(0, 0);
+        PINCEL.lineTo(0, 400);
+        PINCEL.lineTo(400, 400);
+        PINCEL.fill();
+
+        PINCEL.fillStyle = "black";
+        PINCEL.beginPath();
+        PINCEL.moveTo(20,50);
+        PINCEL.lineTo(20,380);
+        PINCEL.lineTo(330,380);
+        PINCEL.fill();
     </script>
 </body>
 </html>
