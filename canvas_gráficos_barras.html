@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BARRAS</title>
+    </head>
+    <body>
+        <canvas width="600" height="400"></canvas>
+        <script>
+            function drawRect(x,y,base,height,color){
+                const PANTALLA = document.querySelector('canvas');
+                const PINCEL = PANTALLA.getContext('2d');
+
+                PINCEL.fillStyle = color;
+                PINCEL.fillRect(x,y,base,height);
+                PINCEL.strokeStyle = "black";
+                PINCEL.strokeRect(x,y,base,height);
+            }
+
+            function writeText(x,y,text){
+                const PANTALLA = document.querySelector('canvas');
+                const PINCEL = PANTALLA.getContext('2d');
+
+                PINCEL.font = "15px Georgia";
+                PINCEL.fillStyle = "black";
+                PINCEL.fillText(text,x,y);
+            }
+        </script>
+    </body>
+    </html>
