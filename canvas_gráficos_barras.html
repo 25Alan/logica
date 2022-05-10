@@ -31,10 +31,19 @@
             var serie2009 = [6,47,41,3,3];
             var serie2019 = [81,9,3,3,4];
             var color = ["blue","green","yellow","red","gray"];
-
+            
+            var y = 0;
             for (let i = 0; i < serie2009.length; i++) {
-                
+                drawRect(0,y,40,serie2009[i],color[i]);
+                y += serie2009[i];
             }
+
+            var y = 0;
+            for (let i = 0; i < serie2019.length; i++) {
+                drawRect(60,y,40,serie2019[i],color[i]);
+                y += serie2019[i];
+            }
+            
         </script>
     </body>
     </html>
