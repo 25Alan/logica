@@ -21,8 +21,15 @@
             PINCEL.arc(x,y,radio,0,2*Math.PI);
             PINCEL.fill();
         }
-
-        designCirc(20,20,10);
+        
+        let x = 0;
+        function animacion(){
+                PINCEL.clearRect(0,0,600,400);
+                designCirc(x,20,10);
+                x++;
+        }
+        
+        setInterval(animacion,5);
     </script>
 </body>
 </html>
