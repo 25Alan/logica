@@ -15,31 +15,44 @@
         PINCEL.fillStyle = "lightgray";
         PINCEL.fillRect(0,0,600,400); 
 
-        function designCirc(x,y,radio){
-            PINCEL.fillStyle = "blue";
+        function designCirc(x,y,radio,color){
+            PINCEL.fillStyle = color;
             PINCEL.beginPath();
             PINCEL.arc(x,y,radio,0,2*Math.PI);
             PINCEL.fill();
         }
         
-        var x = 0;
-        var sentido = 1;
-
+        function azarNum(limite){
+            return Math.round(Math.random()*limite);
+        }
+        
+        function createObjetiv(x,y){
+            designCirc(x,y,15,"black");
+            designCirc(x,y,10,"white");
+            designCirc(x,y,5,"black");
+        }
+        
         function animacion(){
                 PINCEL.clearRect(0,0,600,400);
-
-                if( x > 600) sentido = -1;
-                else if( x < 0) sentido = 1;
-
-                designCirc(x,20,10);
-                designCirc(x,50,10);
-                designCirc(x,90,10);
-                designCirc(x,120,10);
-                x = x + sentido;
+                var xRandom = azarNum(600);
+                var yRandom = azarNum(400);
+                createObjetiv(xRandom,yRandom);
         }
-            
+        
+        setInterval(animacion,1000);
+        
 
-        setInterval(animacion,5);
+        function shoot(event){
+            var x = event.pageX - PANTALLA.offsetLeft;
+            var y = event.pageY - PANTALLA.offsetTop;
+
+            if((x < xRandom + radio) && (x > xRandom - radio) 
+               (y < yRandom + radio) && (y > yRandom - radio)){
+                   alert("Acerté");    
+                } 
+        }
+
+        PANTALLA.onclick = shoot;
     </script>
 </body>
 </html>
