@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIRCULOS A GUSTOS PROPIO</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        const PANTALLA = document.querySelector('canvas');
+        const PINCEL = PANTALLA.getContext('2d');
+        PINCEL.fillStyle = "lightgray";
+        PINCEL.fillRect(0,0,600,400); 
+
+        function designCirc(x,y,radio){
+            PINCEL.fillStyle = "blue";
+            PINCEL.beginPath();
+            PINCEL.arc(x,y,radio,0,2*Math.PI);
+            PINCEL.fill();
+        }
+        
+        var x = 0;
+        var sentido = 1;
+
+        function animacion(){
+                PINCEL.clearRect(0,0,600,400);
+
+                if( x > 600) sentido = -1;
+                else if( x < 0) sentido = 1;
+
+                designCirc(x,20,10);
+                designCirc(x,50,10);
+                designCirc(x,90,10);
+                designCirc(x,120,10);
+                x = x + sentido;
+        }
+            
+
+        setInterval(animacion,5);
+    </script>
+</body>
+</html>
